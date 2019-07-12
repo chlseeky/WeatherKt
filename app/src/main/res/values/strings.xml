@@ -1,3 +1,525 @@
 <resources>
-    <string name="app_name">WeatherKt</string>
+    <string name="app_name">Weather</string>
+
+    <string name="warning_detail">Warning Details</string>
+    <string name="warning">Warning</string>
+    <string name="hour_before">Refreshed %s hours ago</string>
+    <string name="minutes_before">Refreshed %s minutes ago</string>
+
+    <string name="setting_temperature">Temperature Unit</string>
+    <string name="setting_update">Automatic Updates</string>
+
+    <string name="setting_no_connect">Not Connected</string>
+    <string name="city_manage">Manage cities</string>
+    <string name="city_edit">Edit</string>
+    <string name="confirm">Confirm</string>
+    <string name="setting">Settings</string>
+    <string name="policy">Privacy policy</string>
+
+    <string name="success">Success</string>
+    <string name="token_invalid">Token invalid</string>
+    <string name="inner_error">Server internal error</string>
+    <string name="lack_permission">Insufficient permissions, request failed</string>
+    <string name="over_time">The server is overwhelmed</string>
+    <string name="param_error">Request parameter exception</string>
+    <string name="no_info">No corresponding information was found</string>
+    <string name="lat_long_error">Longitude and latitude error</string>
+    <string name="none">off</string>
+    <string name="hour">h</string>
+    <string name="metre">m</string>
+    <string name="kilometer">KM</string>
+    <string name="level">&#160;</string>
+    <string name="level_unit">&#160;MPH</string>
+    <string name="wind_direction">Wind Direction and Force</string>
+    <string name="air_quality">Air Quality</string>
+    <string name="humidity">Humidity</string>
+    <string name="visibility">Visibility</string>
+    <string name="uv_index">UV Index</string>
+    <string name="sun_up">&#160;Sunrise</string>
+    <string name="sun_down">&#160;Sunset</string>
+    <string name="current_time">Current</string>
+    <string name="city_exist_tips">The selected city already exists</string>
+    <string name="not_net">Please connect to the network</string>
+    <string name="add_city">Add City</string>
+    <string name="cancel">Cancel</string>
+    <string name="search_tips">Search global cities</string>
+    <string name="add_current_position">Add weather for the current location</string>
+    <string name="current_position">Current Location</string>
+    <string name="history">History</string>
+    <string name="locate_added">The current city has been added</string>
+    <string name="big_clock_12_hours_format" translatable="false">hh:mm</string>
+    <string name="big_clock_24_hours_format" translatable="false">kk:mm</string>
+    <!--kk:mm-->
+    <string name="date_format">EE, MMMM dd</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="today">Today</string>
+    <!--<string name="week_date_format">EEEE MM dd</string>-->
+    <string name="week_date_format">EEEE</string>
+    <string name="week_date_format_simple">&#160;MM dd</string>
+    <string name="loading_tips">During the search, please turn on the GPS and keep the signal clear</string>
+    <string name="warn_source">Warning information source:</string>
+    <string name="gps_open_tips">Please turn on the GPS service</string>
+
+    <string name="header_pulldown">Continue to pull down to refresh</string>
+    <!--<string name="header_release">Release refresh now</string>-->
+    <string name="header_refreshing">Refreshing...</string>
+    <string name="header_finish">Refresh Completed</string>
+
+    <string name="permission_title">Weather application</string>
+    <string name="widget_no_data">No City</string>
+    <string name="widget_no_net">No Net</string>
+    <string name="permanent_city">Permanent City</string>
+    <string name="per_add_city">Add city</string>
+    <string name="service_run_notice">The weather service is running</string>
+    <string name="message_permission_always_failed">Please give us permission in the settings:\n\n%1$s</string>
+    <string name="permission_content">
+        \t\t\tThe Weather application provides weather forecasting services. To perform these functions, the application
+        requires networking and location information while in use.\n
+        \t\t\tThe weather application uses the system network location or Baidu locationing to display your current
+        latitude and longitude information based on your location. The application needs to collect and use the relevant
+        information: IMEI,etc.\n
+        \t\t\tWeather forecasting service in Weather application uses data services provided by third parties, and
+        requires the use of your location information.\n
+        \t\t\tAbove functions will only be used when you have explicitly authorized it.\n
+        \t\t\tIf you do not agree to our collection of the above information, or do not agree to invoke relevant
+        permissions/features on your phone, weather services will not work properly. You can click "Exit" to turn off
+        data collection and permissions for weather application. Click to view our privacy policy.
+    </string>
+    <string name="exit">Exit</string>
+    <string name="agree">Agree</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy_text">Thank you for using Water OS. In order to let you experience better Water OS
+        services, please read this usage statement carefully first.\n
+        Shenzhen Royole Technology Co., Ltd. and its affiliated companies (hereinafter referred to as "Royole", we) are
+        committed to protecting and respecting your privacy. Therefore, we have developed a privacy policy that covers
+        how we collect, use, disclose, transmit and store your personal information when you use our website, mobile
+        applications or services. You can use our services in many different ways, such as login to Royole website to
+        purchase Royole products, use Royole products, services and so on. Before using our products or services and
+        submitting personal information, please read this Privacy Policy carefully to understand our approach to
+        customer privacy.\n
+        Our privacy policy includes the following aspects:\n
+        Information we collect.\n
+        How do we collect and use information.\n
+        How do you selectively provide information and how do you access and update it.\n
+        Information Sharing and Information Security.\n
+        Collection and use of children\'s personal information.\n
+        The scope of application and revision of this Privacy Policy.\n\n
+
+        <font color="#000000">
+            <b>Ⅰ. The information we collect</b>
+        </font>
+        \n
+        1. Royole collects information for more efficient operation and provides you with the best product experience.
+        The information we collect includes:\n
+        (1) Personal information (personal information is data that can be used to uniquely identify or contact
+        someone);\n
+        (2) Non-personal information (i.e. data that is not directly associated with any particular individual). If we
+        merge non-personal information with personal information, such information will be considered personal
+        information during the period of merging.\n
+        2. When you use FlexPai, your phone number and some unique identifiers in your FlexPai will be sent to Royole in
+        order to provide you with more sincere , convenient and professional services. In the process of registration,
+        it is necessary to access the network, use and read short messages and contact information. At any time, your
+        information is processed in accordance with Royole\'s privacy policy, which can be browsed in "Settings > About
+        Mobile Phone > Legal Information".\n
+        3. The following system services need networking, positioning and other operations, including:\n
+        (1) System data updating service, system updating, telephone service, InCallUI, lock screen, desktop, number
+        ownership, user feedback and so on need to be networked in the use process.\n
+        (2) Weather needs to use your location information in the use process.\n
+        (3) The flashlight needs to use camera flash.\n
+        (4) Intelligent identification of unfamiliar numbers provides unfamiliar number identification services,
+        including identification of suspected fraud, advertising harassment and other telephone numbers. The use of this
+        service requires networking and positioning authority.\n
+        (5) Online Risk Recognition Web Site provides the function of identifying malicious Web sites in short messages,
+        which requires network privileges.\n
+        (6) Intelligent Services provide travel management, road condition reminder, event reminder, health reminder and
+        other services. Using this service requires networking, acquiring current location information, reading
+        information, calendar, calling WLAN, Bluetooth switch, reading/modifying external memory, and the rights of
+        contacts.\n\n
+
+        <font color="#000000">
+            <b>Ⅱ. How do we collect and use information.</b>
+        </font>
+        \n
+        <font color="#000000">
+            <b>1. Collection and use of personal information</b>
+        </font>
+        \n
+        When you interact with us, you may be asked to provide some personal information you need to agree to use our
+        basic product services. This personal information may be combined with other information and used to improve our
+        products or services.
+        Below are some examples of the types of personal information that Royole may collect and how we use it.\n
+        <font color="#000000">
+            <b>1.1 Person Information Collection</b>
+        </font>
+        \n
+        When you create Royole account, download and update Royole software, register in Royole online retail store,
+        participate in online survey or participate in other interaction with Royole, we will ask you to provide
+        personal information, including but not limited to your name, telephone number, e-mail address, mailing address,
+        etc.\n
+        When you purchase Royole products and services, we collect personal information, including but not limited to:
+        delivery details, bank accounts, credit card details, billing address, credit verification and other financial
+        information, contact and communication records.\n
+        When you use Royole products to share your content with family and friends, send messages and products, or
+        invite others to the Royole Forum, Royole will collect personal information related to the above people, such as
+        name, mailing address, e-mail address and telephone number.\n
+        When you first use and activate Royole mobile device, your mobile user identification information, unique
+        identification code of mobile device and the approximate location information of your device will be sent to
+        Royole. In the sending process, the operator only collects traffic or basic information fees. The above
+        information collection may also be applicable to your updating system or software, restoring factory settings,
+        etc.\n
+        <font color="#000000">
+            <b>1.2 Personal Information Use</b>
+        </font>
+        \n
+        Royole will strictly abide by this Privacy Policy and its updates to use your personal information. Your
+        personal information will be used only for purposes that have been identified and agreed upon by you at the time
+        of collection. If there are any other uses besides this, we will ask for your consent in advance.\n
+        Our personal information collected will be used to provide you with Royole\'s products and services, to process
+        your orders or to fulfill your contract with Royole to ensure the functionality and safety of our products and
+        services, to verify your identity, and to prevent and prosecute fraud or other misuse.\n
+        The personal information we collect will be used for the development of our products and services, although in
+        general, we only use comprehensive and statistical information for this purpose.\n
+        The personal information we collect will be used to communicate with you. For example, we will notify you at the
+        first time of update and release of Royole products or services.\n
+        The personal information we collect will be used for personalized design of products and provide you with more
+        personal services, such as recommendation in our services, display of content and advertisements specially
+        created for you, or research.\n
+        If you participate in lottery, competition or similar promotional activities organized by Royole, we will use
+        your personal information to manage such activities.\n
+        Your mobile user identification information, unique mobile device identification number and geographic location
+        information can be used to activate your warranty service and specific software licenses, and you may be invited
+        to participate in the survey. We will also use this information to improve our products and analyze the
+        efficiency of our business operations. But we will not use this information to track your location.\n\n
+
+        <font color="#000000">
+            <b>2. Collection and use of non-personal information</b>
+        </font>
+        \n
+        At the same time, in order to operate and improve Royole\'s technology and services, Royole will collect and use
+        your non-personal information by itself, which will help Royole to provide you with a better user experience and
+        improve Royole\'s service quality.
+        Below are some examples of non-personal information that we may collect and how we use it.\n
+        <font color="#000000">
+            <b>2.1 Collection of non-personal information</b>
+        </font>
+        \n
+        When you create Royole accounts, download Royole software and its updates, register at Royole online retail
+        stores, participate in online surveys or participate in other interactions with Royole, we will collect
+        information such as occupation, language, postcode, area code and the time zone where you use Royole products.
+        User Habits and Problem Finding Information --- When you join FlexPai\'s "User Experience Improvement Program",
+        we will anonymously count the use of various functions of your products according to needs, so as to collect
+        information about your use habits of Royole\'s official website, products and services. And when the system
+        abnormally exits and crashes, we collect information about the current environment of the mobile phone which is
+        easy to diagnose the problem.
+        Relevant information recorded on the server side - When you use soft theme, voice assistant, browser and other
+        products, Royole will collect relevant information recorded on your server side, such as upload, download,
+        synchronization, browse and other user behavior-related data. These data are regarded as non-personal
+        information.
+        Location information - When you use Royole to provide several location-based program services and functions, we
+        need to collect your location information. For example, when you do location-based search, use location-based
+        advertising, use location to optimize weather functions or request map information, your location information
+        may be sent back to Royole so that Royole can provide you with the correct content.
+        Cookies and other technologies gather information - Royole\'s website, online services, interactive
+        applications, e-mail messages and advertising campaigns may use cookies and other technologies such as pixel
+        tags and website beacons to collect and store your non-personal information.
+        Log information - When you visit the Royole server, our server will automatically record some log information.
+        Such server log information may contain the following information: IP address, browser type, browser language,
+        refer source page, operating system, date/time tag and click stream data.
+        Abnormal information - collection of abnormal information when function is abnormal.\n
+        <font color="#000000">
+            <b>2.2 Use of non-personal information</b>
+        </font>
+        \n
+        Our collection of non-personal information, such as occupation, language, postcode, area code and time zone
+        where we use Royole products, can help us better understand user behavior and improve our products, services and
+        advertising.\n
+        We can continuously improve the operational experience, operational performance, repair problems and improve
+        functional design of products and services by analyzing the statistical data obtained by Royole\'s "User
+        Experience Improvement Plan".\n
+        We use cookies and other technologies to collect information that will bring you a better user experience and
+        improve our overall service quality. For example, by saving your language preferences, we can display our
+        services in your preferred language. We can use pixel tags to send e-mails in a readable format to users and
+        tell them if they are opened. We can use this information to reduce sending e-mail to users or not to users.\n\n
+
+        <font color="#000000">
+            <b>Ⅲ. How do you selectively provide information and how do you access and update it.</b>
+        </font>
+        \n
+        <font color="#000000">
+            <b>1. How do you selectively provide information</b>
+        </font>
+        \n
+        Everyone has their own focus on privacy. Based on this, we will clearly point out the way we collect information
+        so that you can choose the way to receive information.\n
+        You are free to set whether to join the User Experience Improvement Plan or not. You can exit the plan by
+        turning off the switch of the User Experience Improvement Plan item.\n
+        You can modify the location settings of your device from the device settings, such as changing or disabling the
+        location method or the location server, or modifying the accuracy of your location information to change the
+        location information provided to Royole.\n
+        You can modify the browser settings to reject or accept cookies according to your needs, or you can delete them
+        from your storage device at any time, or notify you when writing cookies.\n
+        <font color="#000000">
+            <b>2. Access and update of personal information</b>
+        </font>
+        \n
+        By clicking on [https://www.royole.com/login] to log in to your account, you can access and update your personal
+        information. You can also delete some personal information or ask us to delete your personal account unless we
+        have to keep it for legal reasons.\n
+        Whenever you use our services, we strive to enable you to access your personal information. If this information
+        is incorrect, we will try to let you update or delete it quickly in various ways (unless we have to keep it for
+        legitimate business or legal reasons). In updating your personal information, we may ask you to verify your
+        identity before processing your request.\n
+        We may refuse requests that are unreasonable, requiring too much technical input, risking the privacy of others,
+        or very impractical.\n
+        As long as we can let you access and modify the information, and it does not require too much investment, we
+        will provide it free of charge. We strive to improve the maintenance of services to protect information from
+        accidental or malicious damage. Therefore, when you delete information from our service, we may not immediately
+        delete the residual copies of the information from the server in use, or we may not delete the corresponding
+        information from the backup system.\n\n
+
+        <font color="#000000">
+            <b>Ⅳ. Information Sharing and Information Security</b>
+        </font>
+        \n
+        <font color="#000000">
+            <b>1. Sharing information with third parties</b>
+        </font>
+        \n
+        Unless limited sharing is specified in this privacy policy, we will keep your personal information strictly
+        confidential and will not share your personal information with third parties.\n
+        You are authorized to share your personal information with third parties without your consent in the following
+        circumstances:\n
+        We share these personal information with third parties because of legal investigation, litigation, enforcement
+        or other mandatory legal provisions or requirements.\n
+        We provide personal information to our subsidiaries, affiliates or other trusted enterprises or individuals so
+        that they can process personal information on our behalf. We require the above parties to agree to handle these
+        personal information in accordance with our provisions, this Privacy Policy and any other applicable
+        confidentiality and security measures.\n
+        If we reorganize, merge or sell, we will continue to keep our personal information confidential and inform all
+        affected users in accordance with existing privacy policy constraints before transferring all personal
+        information we collect.\n
+        We may reasonably share aggregated non-personal information with the public and partners based on the need to
+        operate or protect users, such as in order to demonstrate the overall use trend of our products or services.\n
+        <font color="#000000">
+            <b>2. Information Security</b>
+        </font>
+        \n
+        We strive to protect users of Royole from unauthorized access to, tampering with, disclosure or destruction of
+        the information we keep. To this end, we have taken the following measures in particular:\n
+        We use SSL to encrypt many services. We will review information collection, storage and processing practices
+        (including physical security measures) to avoid unauthorized access to various systems.\n
+        We only allow those employees who need to know about personal information in order to help us deal with personal
+        information and authorize those who deal with service companies to access personal information, and they need to
+        fulfil strict contractual confidentiality obligations. If they fail to fulfil these obligations, they may be
+        prosecuted for legal responsibility or terminated their relationship with Royole.\n
+        For us, the security of your information is very important. Therefore, we will continue to strive to protect
+        your personal information security, and implement security measures such as storage and transmission of the
+        whole process of encryption, so as to prevent your information from being accessed, used or disclosed without
+        authorization. At the same time, the specific content of some encrypted data, except for the user himself, other
+        people have no right to access.\n\n
+
+        <font color="#000000">
+            <b>Ⅴ. Collection and use of children\'s personal information</b>
+        </font>
+        \n
+        We recommend that children under the age of 18 use Royole products or services with the permission and guidance
+        of their legal guardians.\n
+        Royole will not collect his personal information without knowing that the other party is a child, nor will he
+        disclose his personal information to any third party. The guardian has the right to refuse Royole and its
+        affiliated companies to further collect the personal information of the guardian, or to request Royole and its
+        affiliated companies to delete the personal information of the guardian. If we find that we have collected
+        personal information about children under the age of 18, we will take measures to delete such information as
+        soon as possible.\n\n
+
+        <font color="#000000">
+            <b>Ⅵ. Scope of Use and Revision of this Privacy Policy</b>
+        </font>
+        \n
+        <font color="#000000">
+            <b>1. Scope of application of this Privacy Policy</b>
+        </font>
+        \n
+        Our privacy policy does not apply to third-party products and/or services. Royole\'s products and services may
+        contain links to third-party websites, products and services. When you use third-party products or receive
+        third-party services, they may get your information. Therefore, we remind you to read the third-party privacy
+        policy.\n
+        At the same time, this privacy policy does not apply to collecting data from external websites after you click
+        on links.\n
+        <font color="#000000">
+            <b>2. Revision of this Privacy Policy</b>
+        </font>
+        \n
+        This Privacy Policy allows for adjustments. Without your express consent, we will not impair your rights under
+        this Privacy Policy unless you are notified or announce your website through the e-mail address you provide.
+    </string>
+
+
+    <string-array name="weather_code">
+        <item>Sunny</item>
+        <item>Cloudy</item>
+        <item>Overcast</item>
+        <item>Shower</item>
+        <item>Thundershower</item>
+
+        <item>Thundershower with hail</item>
+        <item>Sleet</item>
+        <item>Light rain</item>
+        <item>Moderate rain</item>
+        <item>Heavy rain</item>
+
+        <item>Storm</item>
+        <item>Heavy storm</item>
+        <item>Severe storm</item>
+        <item>Snow flurry</item>
+        <item>Light snow</item>
+
+        <item>Moderate snow</item>
+        <item>Heavy snow</item>
+        <item>Snowstorm</item>
+        <item>Foggy</item>
+        <item>Ice rain</item>
+
+        <item>Dust storm</item>
+        <item>Light to moderate rain</item>
+        <item>Moderate to heavy rain</item>
+        <item>Heavy rain to storm</item>
+        <item>Storm to heavy storm</item>
+
+        <item>Heavy to severe storm</item>
+        <item>Light to moderate snow</item>
+        <item>Moderate to heavy snow</item>
+        <item>Heavy snow to snowstorm</item>
+        <item>Dust</item>
+
+        <item>Sand</item>
+        <item>Sandstorm</item>
+        <item>Dense foggy</item>
+        <item>Snow</item>
+        <item>Moderate foggy</item>
+
+        <item>Haze</item>
+        <item>Moderate haze</item>
+        <item>Heavy haze</item>
+        <item>Severe haze</item>
+        <item>Heavy foggy</item>
+
+        <item>Severe foggy</item>
+        <item>Unknown</item>
+    </string-array>
+    <string-array name="wind_direction">
+        <item>No Wind</item>
+        <item>Northeast Wind</item>
+        <item>East Wind</item>
+        <item>Southeast Wind</item>
+        <item>South Wind</item>
+
+        <item>Southwest Wind</item>
+        <item>West Wind</item>
+        <item>Northwest Wind</item>
+        <item>North Wind</item>
+        <item>Whirl Wind</item>
+    </string-array>
+    <string-array name="wind_force">
+        <item>Breeze</item>
+        <item>3-4 Level</item>
+        <item>4-5 Level</item>
+        <item>5-6 Level</item>
+        <item>6-7 Level</item>
+
+        <item>7-8 Level</item>
+        <item>8-9 Level</item>
+        <item>9-10 Level</item>
+        <item>10-11 Level</item>
+        <item>11-12 Level</item>
+    </string-array>
+    <string-array name="wind_speed">
+        <item>&lt;10m/h</item>
+        <item>10~17m/h</item>
+        <item>17~25m/h</item>
+        <item>25~34m/h</item>
+        <item>34~43m/h</item>
+
+        <item>43~54m/h</item>
+        <item>54~65m/h</item>
+        <item>65~77m/h</item>
+        <item>77~89m/h</item>
+        <item>89~102m/h</item>
+    </string-array>
+
+    <string-array name="air_quality">
+        <item>Excellent</item>
+        <item>Good</item>
+        <item>Moderate</item>
+        <item>Moderate</item>
+        <item>Unhealthy</item>
+        <item>Hazardous</item>
+    </string-array>
+
+    <string-array name="gj_warning_type">
+        <item>Typhoon</item>
+        <item>Storm</item>
+        <item>Snowstorm</item>
+        <item>Cold wave</item>
+        <item>Gale</item>
+
+        <item>Sandstorm</item>
+        <item>High temperature</item>
+        <item>Drought</item>
+        <item>Thunder</item>
+        <item>Hail</item>
+
+        <item>Frost</item>
+        <item>Dense foggy</item>
+        <item>Haze</item>
+        <item>Road icing</item>
+    </string-array>
+
+    <string-array name="gj_warning_level">
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Red</item>
+    </string-array>
+
+    <string-array name="gd_warning_type">
+        <item>Storm</item>
+        <item>High temperature</item>
+        <item>Hail</item>
+        <item>Dense foggy</item>
+        <item>Road icing</item>
+
+        <item>Haze</item>
+        <item>Cold</item>
+        <item>Thunderstorm</item>
+        <item>Forest fire</item>
+        <item>Typhoon</item>
+
+        <item>Thunder</item>
+    </string-array>
+
+    <string-array name="gd_warning_level">
+        <item>White</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Red</item>
+
+        <item>Black</item>
+    </string-array>
+
+    <string-array name="auto_update_time">
+        <item>off</item>
+        <item>1h</item>
+        <item>3h</item>
+        <item>6h</item>
+        <item>12h</item>
+        <item>24h</item>
+    </string-array>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="database_full_exception">
+        Your mobile phone space is insufficient, affecting the normal use, please clean up the file to release more
+        space!
+    </string>
+    <string name="database_exception">database exception!</string>
 </resources>
