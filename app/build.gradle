@@ -5,12 +5,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.0"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "com.lydsexample.weatherkt"
-        minSdkVersion 27
-        targetSdkVersion 27
+        minSdkVersion 28
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -37,6 +37,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0-alpha1'
 
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
@@ -50,17 +51,19 @@ dependencies {
     }
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
     implementation 'com.squareup.okhttp3:okhttp:3.8.0'
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45-androidx'
     implementation project(path: ':magicindicator')
-    implementation project(path: ':refresh-layout')
-    implementation project(path: ':refresh-header')
+//    implementation project(path: ':refresh-layout')
+//    implementation project(path: ':refresh-header')
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-31'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-31'//没有使用特殊Header，可以不加这行
     implementation 'com.daimajia.easing:library:2.0@aar'
     implementation 'com.daimajia.androidanimations:library:2.3@aar'
     implementation 'org.greenrobot:greendao:3.2.2'
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'com.yanzhenjie:permission:2.0.0-rc12'
-    implementation files('libs/BaiduLBS_Android.jar')
+//    implementation files('libs/BaiduLBS_Android.jar')
     implementation "me.leolin:ShortcutBadger:1.1.22@aar"
 }

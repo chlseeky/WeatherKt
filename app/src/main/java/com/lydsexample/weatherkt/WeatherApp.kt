@@ -5,35 +5,35 @@ import android.content.Context
 import com.lydsexample.weatherkt.utils.LogUtils
 import com.lydsexample.weatherkt.utils.SPUtils
 import com.lydsexample.weatherkt.utils.ToastUtils
-import com.scwang.smartrefresh.layout.header.ClassicsHeader
+//import com.scwang.smartrefresh.layout.header.ClassicsHeader
 
 class WeatherApp : Application() {
-    private var mInstance = WeatherApp()
+//    private var mInstance = null
     private var mAppContext: Context? = null
     val DB_NAME = "weather.db"
 //    private var mDaoSession: DaoSession? = null
 
-    var token = null;
-    var fontScale = null;
+    var token : String = "";
+    var fontScale : Float = 0.0f;
     var isC = true;
 
     override fun onCreate() {
         super.onCreate()
 
-        ClassicsHeader.REFRESH_HEADER_PULLING = getString(R.string.header_pulldown) //getString(R.string.header_pulldown);"下拉可以刷新";
-        ClassicsHeader.REFRESH_HEADER_RELEASE = getString(R.string.header_pulldown) //getString(R.string.header_release);//"释放立即刷新";
-        ClassicsHeader.REFRESH_HEADER_REFRESHING = getString(R.string.header_refreshing)//"正在刷新...";
-        ClassicsHeader.REFRESH_HEADER_FINISH = getString(R.string.header_finish)//"刷新完成";
+//        ClassicsHeader.REFRESH_HEADER_PULLING = getString(R.string.header_pulldown) //getString(R.string.header_pulldown);"下拉可以刷新";
+//        ClassicsHeader.REFRESH_HEADER_RELEASE = getString(R.string.header_pulldown) //getString(R.string.header_release);//"释放立即刷新";
+//        ClassicsHeader.REFRESH_HEADER_REFRESHING = getString(R.string.header_refreshing)//"正在刷新...";
+//        ClassicsHeader.REFRESH_HEADER_FINISH = getString(R.string.header_finish)//"刷新完成";
 
-        mInstance = this
+//        mInstance = this
         mAppContext = this.applicationContext
-        token = SPUtils.getInstance().getString("access_token", null) as Nothing?
+        token = SPUtils.getInstance().getString("access_token", "")
 //        token = "dsffffffffffffffffff";
         if (!SPUtils.getInstance().getString("TemperatureUnit", "°C").equals("°C")) {
             isC = false
             //            unitRate = (int) UnitUtils.CtoF(1);
         }
-        fontScale = resources.configuration.fontScale as Nothing?
+        fontScale = resources.configuration.fontScale
 
         ToastUtils.setBgResource(R.drawable.toast_bg_shape)
 //        ToastUtils.setGravity(Gravity.CENTER, 0, 0);
