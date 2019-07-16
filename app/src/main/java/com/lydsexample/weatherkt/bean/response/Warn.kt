@@ -1,6 +1,6 @@
-package com.lydsexample.weatherkt.bean
+package com.lydsexample.weatherkt.bean.response
 
-class Warn{
+class Warn {
     var w1: String? = null
     var w2: String? = null
     var w3: String? = null
@@ -18,7 +18,5 @@ class Warn{
     var w13: String? = null
     var w14: String? = null
     var w15: String? = null
-
-
 
 }

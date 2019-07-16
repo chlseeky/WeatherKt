@@ -2,11 +2,11 @@ package com.lydsexample.weatherkt.adapter
 
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
-import com.lydsexample.weatherkt.bean.response.Warn
+import com.lydsexample.weatherkt.bean.TypeBean
 
-class WarnAdapter(layoutResId :Int, data : List<Warn>) : BaseQuickAdapter<Warn, BaseViewHolder>(data) {
+class DialogAdapter(layoutResId: Int, data: List<TypeBean>) : BaseQuickAdapter<TypeBean,BaseViewHolder>(data) {
 
-    override fun convert(helper: BaseViewHolder?, item: Warn?) {
+    override fun convert(helper: BaseViewHolder?, item: TypeBean?) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 

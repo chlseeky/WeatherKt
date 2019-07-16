@@ -7,10 +7,19 @@ import androidx.viewpager.widget.PagerAdapter
 
 abstract class BaseFragmentAdapter(fm: FragmentManager?, fragmentList: List<Fragment>, titles: List<String>) : FragmentStatePagerAdapter(fm) {
     var titles: List<String>? = null
-    var mFragments: List<Fragment>? = null
+    var mFragments: ArrayList<Fragment> = ArrayList()
+
+    init {
+        mFragments.addAll(fragmentList)
+        this.titles = titles;
+    }
+
+    override fun getItem(position: Int): Fragment {
+        return mFragments.get(position)
+    }
 
     override fun getCount(): Int {
-        return isEmpty() ? 0 : mFragment.size;
+        return mFragments.size;
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
@@ -20,10 +29,5 @@ abstract class BaseFragmentAdapter(fm: FragmentManager?, fragmentList: List<Frag
     override fun getItemPosition(`object`: Any): Int {
         return PagerAdapter.POSITION_NONE
     }
-
-    fun isEmpty(): Boolean{
-        return mFragments == null
-    }
-
 
 }
