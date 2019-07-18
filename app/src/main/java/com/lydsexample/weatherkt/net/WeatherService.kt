@@ -7,6 +7,10 @@ import retrofit2.http.Header
 import retrofit2.http.QueryMap
 
 interface WeatherService {
+    companion object{
+        const val BASE_AUTH_URL = "http://47.107.253.85"
+        const val BASE_WEATHER_URL = "http://47.106.208.78"
+    }
 //    val BASE_AUTH_URL = "http://47.107.253.85"
 //    val BASE_WEATHER_URL = "http://47.106.208.78"
 

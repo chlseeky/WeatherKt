@@ -8,8 +8,13 @@ import com.lydsexample.weatherkt.utils.ToastUtils
 //import com.scwang.smartrefresh.layout.header.ClassicsHeader
 
 class WeatherApp : Application() {
-//    private var mInstance = null
-    private var mAppContext: Context? = null
+    companion object {
+//        https://www.jianshu.com/p/1fdae52a7d8e
+            @JvmStatic
+            lateinit var instance: WeatherApp
+            private set
+    }
+//    open lateinit var mAppContext: Context
     val DB_NAME = "weather.db"
 //    private var mDaoSession: DaoSession? = null
 
@@ -24,9 +29,7 @@ class WeatherApp : Application() {
 //        ClassicsHeader.REFRESH_HEADER_RELEASE = getString(R.string.header_pulldown) //getString(R.string.header_release);//"释放立即刷新";
 //        ClassicsHeader.REFRESH_HEADER_REFRESHING = getString(R.string.header_refreshing)//"正在刷新...";
 //        ClassicsHeader.REFRESH_HEADER_FINISH = getString(R.string.header_finish)//"刷新完成";
-
-//        mInstance = this
-        mAppContext = this.applicationContext
+        instance = this
         token = SPUtils.getInstance().getString("access_token", "")
 //        token = "dsffffffffffffffffff";
         if (!SPUtils.getInstance().getString("TemperatureUnit", "°C").equals("°C")) {
