@@ -1,7 +1,6 @@
 package com.lydsexample.weatherkt
 
 import android.app.Application
-import android.content.Context
 import com.lydsexample.weatherkt.utils.LogUtils
 import com.lydsexample.weatherkt.utils.SPUtils
 import com.lydsexample.weatherkt.utils.ToastUtils

@@ -16,25 +16,22 @@ abstract class AAdapter<T>(list : List<T>, context : Context, layoutId : Int) : 
         this.mContext = context;
     }
 
-    override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun getView(p0: Int, p1: View, p2: ViewGroup): View {
         val viewHolder = ViewHolder.getHolder(mContext, p2, layoutId, p0, p1)
         convert(viewHolder, list.get(p0))
         viewHolder.getconvertView()
+        return p1
     }
 
-    override fun getItem(p0: Int): Any {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-        list.get(p0)
+    override fun getItem(p0: Int): T {
+        return list.get(p0)
     }
 
     override fun getItemId(p0: Int): Long {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-        p0
+        return p0.toLong()
     }
 
     override fun getCount(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         return list.size
     }
 
